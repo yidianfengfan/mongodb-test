@@ -1,4 +1,23 @@
-mongodb-test
+Host jd_book_read.github.com
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa
+
+Host yidianfengfan@github.com
+HostName github.com
+User git
+IdentityFile ~/.ssh/id_rsa_icegrid-test
+
+Host mongodb-test
+HostName github.com
+User git
+IdentityFile ~/.ssh/mongodb-test
+
+===========
+1. Host对应项目名
+2. 需要修改remote.origin.remote 中host为上面写也就是项目名
+3. remote.xxxx.remote 中间的xxx就是 git push xxx master|branchName中的xxx
+
 F:\svn\git\mongodb-test>git remote -v
 origin  git@github.com:yidianfengfan/mongodb-test.git (fetch)
 origin  git@github.com:yidianfengfan/mongodb-test.git (push)
@@ -8,3 +27,32 @@ F:\svn\git\mongodb-test>git config remote.origin.url git@mongodb-test:yidianfeng
 F:\svn\git\mongodb-test>git remote -v
 origin  git@mongodb-test:yidianfengfan/mongodb-test.git (fetch)
 origin  git@mongodb-test:yidianfengfan/mongodb-test.git (push)
+
+F:\svn\git\mongodb-test>git status
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       test
+nothing added to commit but untracked files present (use "git add" to track)
+
+F:\svn\git\mongodb-test>git add test
+
+F:\svn\git\mongodb-test>git commit -a -m "test host"
+[master (root-commit) 77a7ee8] test host
+ 1 files changed, 10 insertions(+), 0 deletions(-)
+ create mode 100644 test
+
+F:\svn\git\mongodb-test>git push -v  origin master
+Pushing to git@mongodb-test:yidianfengfan/mongodb-test.git
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 339 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@mongodb-test:yidianfengfan/mongodb-test.git
+ * [new branch]      master -> master
+
