@@ -1,0 +1,10 @@
+mongodb-test
+F:\svn\git\mongodb-test>git remote -v
+origin  git@github.com:yidianfengfan/mongodb-test.git (fetch)
+origin  git@github.com:yidianfengfan/mongodb-test.git (push)
+
+F:\svn\git\mongodb-test>git config remote.origin.url git@mongodb-test:yidianfengfan/mongodb-test.git
+
+F:\svn\git\mongodb-test>git remote -v
+origin  git@mongodb-test:yidianfengfan/mongodb-test.git (fetch)
+origin  git@mongodb-test:yidianfengfan/mongodb-test.git (push)
